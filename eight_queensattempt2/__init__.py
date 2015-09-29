@@ -1,6 +1,10 @@
 __author__ = 'chris'
 __author__ = 'chris'
 from eight_queensattempt2.obstruction_tests import obstructed_above
+'''
+I apologize for the code being messy, but I spent over six hours working on this
+so I don't want to try to clean it and mess up my submission.
+'''
 
 BOARD_SIZE = 8
 
@@ -12,34 +16,21 @@ def get_stable_configurations():
          [4, 0, 0, 0, 0, 0, 0, 0], [5, 0, 0, 0, 0, 0, 0, 0], [6, 0, 0, 0, 0, 0, 0, 0], [7, 0, 0, 0, 0, 0, 0, 0]]
     #temp_stable_configurations = stable_configurations.copy()  # for changes
     while row_index < BOARD_SIZE - 1:  # termination fulfills subgoal 3 (see Note 1 below)
-        #print("-------entering for WHILE LOOP.  Configuration index = ","Row Index = ",row_index)
         temp_stable_configurations = stable_configurations.copy()  # for changes
         row_index = row_index + 1  # termination is obvious
         for configuration_index in range(len(stable_configurations)):
-            #print("-------entering for configuration index loop.  Configuration index = ",configuration_index,"Row Index = ",row_index)
             configuration = stable_configurations[configuration_index]  # shorthand
             temp_stable_configurations.remove(configuration)  # (may replace)
-            #print("Configuration:",configuration)
-            #temporary_configuration = configuration.copy()  # redefined
+            # Add a new configuration for every available column
             for column_index in range(BOARD_SIZE):
                 temporary_configuration = configuration.copy()
-
-                #temporary_configuration[row_index]=column_index
-                #configuration = stable_configurations[configuration_index]  # shorthand
-                #print("-------entering for COLUMN_INDEX index loop.  Stable Configurations = ", len(stable_configurations),"Configuration index = ",configuration_index,"Row Index = ",row_index," Column Index = ",column_index)
-                #print(obstructed_above(row_index,column_index,configuration))
+                # Add this queen position to this stable configuration
                 if not obstructed_above(row_index, column_index, configuration):
-                    #print("first - temporary_configuration: ",temporary_configuration)
-                    #temporary_configuration[row_index] = column_index
-                    #print("Second - temporary_configuration: ",temporary_configuration)
                     temporary_configuration[row_index]=column_index
                     temp_stable_configurations.append(temporary_configuration)
+        # Restore subgoal 1 above by considering each candidate configuration
         stable_configurations=temp_stable_configurations.copy()
-
-
-    #OK
     stable_configurations = temp_stable_configurations.copy()  # restore #(at the end?)
-    #OK
     return stable_configurations
 
 # TEST
