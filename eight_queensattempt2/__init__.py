@@ -1,10 +1,8 @@
 __author__ = 'chris'
-__author__ = 'chris'
+# Chris OConnell
+#MET CS 521
+#Lab 3
 from eight_queensattempt2.obstruction_tests import obstructed_above
-'''
-I apologize for the code being messy, but I spent over six hours working on this
-so I don't want to try to clean it and mess up my submission.
-'''
 
 BOARD_SIZE = 8
 
@@ -33,7 +31,6 @@ def get_stable_configurations():
     stable_configurations = temp_stable_configurations.copy()  # restore #(at the end?)
     return stable_configurations
 
-# TEST
 print("------- TEST of get_stable_configurations() -------")
 stable_configurations = get_stable_configurations()
 print("\nNumber of solutions: " + str(len(stable_configurations)) + "\n")
