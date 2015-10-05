@@ -1,4 +1,6 @@
-__author__ = 'MET'
+__author__ = 'ChrisPOConnell'
+'''Lab 4, METCS521 due 10/7/2015)
+'''
 
 import random
 
@@ -29,7 +31,7 @@ def part2(content_list):
     #Intent: creates randomized index
     #precondition, content_list must be generated and passed in.
     reordered_fragment_indices = list(range(len(content_list)))  # *
-    print("Here's the reorderded_fragment_indices: ",reordered_fragment_indices)
+    #print("Here's the reorderded_fragment_indices: ",reordered_fragment_indices)
     random.shuffle(reordered_fragment_indices)
     return(reordered_fragment_indices)
     #Postcondition: index
@@ -42,7 +44,8 @@ def part3(content_list,reordered_fragment_indices):
     print()
     for i in range(len(content_list)):
         current_index = reordered_fragment_indices[i]
-        print(str(current_index) + '.' + content_list[current_index])
+        content = content_list[current_index]
+        print(str(current_index) + '.' + content[0:3],"...",content[7:len(content)])
 
 # * e.g., list(range(3)) means [0, 1, 2]
 
