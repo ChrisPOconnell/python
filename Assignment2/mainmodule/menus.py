@@ -51,9 +51,11 @@ def collectprovinces():
         except SyntaxError:
             print("Please enter a single digit number between 3 and 10  ")
             #print("Please enter a single digit number between 3 and 10  ")
+        except NameError:
+            print("Please enter a single digit number between 3 and 10  ")
+            #print("Please enter a single digit number between 3 and 10  ")
 
     print("Next let's collect the 3 letter Province abbreviations.")
-
     indx=0
     while (indx< provnum):
         prov=input("Please enter the three digit Province abbreviation, then press ENTER:  ")
@@ -66,6 +68,14 @@ def collectprovinces():
     #Feature 5 found in assignment 2, sort provinces alphabetically
     provlist.sort()
     print(provlist)
+    #Feature 6, write provinces to file
+    fileW = open('LogFile.txt', 'w')
+    fileW.write('Provinces:\n')
+    for index in range(len(provlist)):
+        fileW.write(provlist[index])
+        fileW.write("\n")
+    fileW.close();
+
 result=mainmenu()
 if result == '1':
     collectprovinces()
