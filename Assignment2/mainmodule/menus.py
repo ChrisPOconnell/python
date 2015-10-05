@@ -48,12 +48,12 @@ def collectprovinces():
             provnum=eval(input("How many Provinces are in this year's catalog?  "))
             if provnum < 3 or provnum > 10:
                 print("Great, you have",provnum,"Provinces to work with this year.  That should be easy :)\n")
-        except SyntaxError:
+        except (SyntaxError,NameError):
             print("Please enter a single digit number between 3 and 10  ")
             #print("Please enter a single digit number between 3 and 10  ")
-        except NameError:
-            print("Please enter a single digit number between 3 and 10  ")
-            #print("Please enter a single digit number between 3 and 10  ")
+        #except NameError:
+        #    print("Please enter a single digit number between 3 and 10  ")
+        #    #print("Please enter a single digit number between 3 and 10  ")
 
     print("Next let's collect the 3 letter Province abbreviations.")
     indx=0
