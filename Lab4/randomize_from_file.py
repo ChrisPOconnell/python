@@ -21,7 +21,7 @@ def part1():
     print('-----------------------------------------')
     content_list = content_of_file.split(SEPARATOR)
     return(content_list)
-    #Postcondition: file contents is returned.
+    #Postcondition: file contents are returned.
 # (1) reordered_fragment_indices is a re-ordering of 0, 1, ..., content_list.length - 1
 # AND (2) the elements of content_list, are on the console in this order
 
@@ -34,11 +34,11 @@ def part2(content_list):
     #print("Here's the reorderded_fragment_indices: ",reordered_fragment_indices)
     random.shuffle(reordered_fragment_indices)
     return(reordered_fragment_indices)
-    #Postcondition: index
+    #Postcondition: reordered index returned.
 
 # Part (2)
 def part3(content_list,reordered_fragment_indices):
-    #Intent: shuffle and display
+    #Intent: shuffle and display, also trip characters.
     #Precondition: Content_list must be created and index must be generated
     #and randomized.
     print()
