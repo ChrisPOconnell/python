@@ -20,10 +20,10 @@ def mainmenu():
     index = 0
     print("\nWelcome to the Catalog Staging Program (Version 2)\n")
     while (valid != 'OK'):
-        print("\n1   Enter provinces (from scratch)")
+        print("1   Enter provinces (from scratch)")
         print("2   View provinces (from file)")
         print("?   View log of progress so far.")
-        print("Q   to quit\n\n")
+        print("Q   to quit\n")
         selection=input("Enter your value and then press enter: ")
         for index in range(len(valid_selection)):
             #print("Valid?", valid, "Selection: ",selection)
@@ -44,6 +44,7 @@ def collectprovinces():
     while provnum < 3 or provnum >10:
         #Feature 9 found in assignment 2, correct error where invalid input causes
         #program to cease operations.
+        #Feature 10 found in assignment 2, trap errors.
         try:
             provnum=eval(input("How many Provinces are in this year's catalog?  "))
             if provnum < 3 or provnum > 10:
@@ -76,14 +77,27 @@ def collectprovinces():
         fileW.write("\n")
     fileW.close();
 
-result=mainmenu()
-if result == '1':
-    collectprovinces()
-elif result == '2':
-    print("this function is not yet working.")
-elif result =='?':
-    print("this function is not yet working.")
-elif result =='Q':
-    print("this function is not yet working.")
+def readlog():
+    #Intent: Read contents of log file and display them
+    #Feature 8 found in assignment 2, read file and display
+    #Feature 10 found in assignment 2, trap errors.
+    try:
+        fileR = open('LogFile.txt')
+        log=fileR.read()
+        print("Here's what you've got so far:")
+        print(log)
+    except FileNotFoundError:
+        print("\nLooks like the file you need hasn't been built yet.\n")
+        print("Please enter the provinces again.")
+
+result='*'
+while(result!='Q'):
+    result=mainmenu()
+    if result == '1':
+        collectprovinces()
+    elif result == '2':
+        print("this function is not yet working.")
+    elif result =='?':
+        readlog()
 
 
