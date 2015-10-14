@@ -1,3 +1,4 @@
 __author__ = 'chris'
 def print_hello():
-    return('hello world')
+    var=input("What's your input?: ")
+    return(var)
