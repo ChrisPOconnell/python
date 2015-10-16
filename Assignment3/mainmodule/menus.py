@@ -1,16 +1,9 @@
 __author__ = 'chris'
 '''
-Assignment 2
-I'm having a problem where I try to modularize this program by putting the mainmenu()
-function into a file called menus.py.  The function is imported in __init__.py.
-For some odd reason this causes the mainmenu() function to run repeatedly, even after it
-should exit.
-
-While I was hoping to have this working at the time Assignment 2 was submitted
-I wasn't able to get it working.
+Assignment 3
 '''
 
-
+#import unittest
 def mainmenu():
     #Intent:  To serve as a main menu for the user to select options from.
     #Definitions:
@@ -89,7 +82,6 @@ def readlog():
     except FileNotFoundError:
         print("\nLooks like the file you need hasn't been built yet.\n")
         print("Please enter the provinces again.")
-
 
 
 
