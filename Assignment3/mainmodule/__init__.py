@@ -11,12 +11,7 @@ import unittest
 
 result = '*'
 while(result != 'Q'):
-    result = mainmenu()
-    class TestMainmenu(unittest.TestCase):
-        def test(self):
-            self.assertEqual(result, "1" or "2" or "?" or "Q")
-    
-    
+    result = mainmenu()  
     if result == '1':
         collectprovinces()
     elif result == '2':

@@ -4,6 +4,7 @@ Assignment 3
 '''
 import time
 from classes import Province
+from classes import TestProvince
 
 def collectprovinces():
     #intent: collect provinces and perform basic quality assurance.
@@ -17,10 +18,11 @@ def collectprovinces():
         try:
             provnum=eval(input("How many Provinces are in this year's catalog?  "))
             if provnum < 3 or provnum > 10:
-                print("Great, you have",provnum,"Provinces to work with this year.  That should be easy :)\n")
+                print("Please enter a single digit number between 3 and 10 ")
         except (SyntaxError,NameError):
             print("Please enter a single digit number between 3 and 10  ")
-
+    
+    print("\nGreat, you have",provnum,"Provinces to work with this year.  That should be easy :)\n")
     print("Next let's collect the 3 letter Province abbreviations.")
     indx = 0
     while (indx< provnum):
@@ -33,15 +35,20 @@ def collectprovinces():
             #feature 4 found in assignment 2, convert to upper.
             provlist.append(prov.upper())
             pr = Province(provlist[indx],location,comment)
+            #I'm replacing the simple value of province abbreviation with the enter collected
+            #string in the provlist here.  The value of the objects will replace the abbreviation.
             provlist[indx] = str(pr)
+            #Feature 17, Assignment 3, use of a class method to update a class variable.
+            Province.increment_master_province_count()
             indx= indx+1
     #Feature 5 found in assignment 2, sort provinces alphabetically
-    #provlist.sort()
+    provlist.sort()
     print("\nThe provinces you entered are:\n")
     for index in range(len(provlist)):
             print(provlist[index])
     input("\nPress ENTER to continue...")
-    
+      
+    #TestProvince.testcount(provnum=provnum)
     #Feature 6, write provinces to file
     fileW = open('LogFile.txt', 'w')
     #Feature 11, Assignment 3 (also related to feature 6 of assignment 1)

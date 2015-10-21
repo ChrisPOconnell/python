@@ -1,6 +1,6 @@
 Province Entry Date:
-Sun Oct 18 11:36:26 2015
+Wed Oct 21 08:31:23 2015
 Provinces:
-UNE:NY:Northeast
-WIS:WI:Closign Soon
-CDT:IL:Absorbing WIS
+JCU:DC:None
+UNE:NY:None
+WIS:WI:Closing
