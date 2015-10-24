@@ -16,7 +16,7 @@ class Province:
         def __str__(self):
             return(self.name + ":" + self.office_location + ":" +self.comments)
   
-  #Feature 17, Assignment 3, use of a class method to update a class variable.      
+  #Feature 18, Assignment 3, use of a class method to update a class variable.      
         @classmethod
         def increment_master_province_count(cls):
                 Province.total_provinces+= 1
