@@ -14,11 +14,15 @@ def get_name():
     name_input = input()
     if name_input.find('#') > -1:
         return(name_input)
-
+    else:
+        raise MyException(input_name)
+        
 # EXECUTION
 
-try:
-    get_name()
-except MyException:
-    print(MyException.error_description)
+def demo_exception_handling(input_name)
+    try:
+        get_name()
+    except MyException:
+        print(MyException.error_description)
 
+get_name()
