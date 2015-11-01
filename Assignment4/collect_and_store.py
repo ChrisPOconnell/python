@@ -8,7 +8,8 @@ import time
 import xlrd
 import xlwt
 from classes import Province
-from classes import TestProvince
+from test import *
+#from classes import TestProvince
 
 def collectprovinces():
     #intent: collect provinces and perform basic quality assurance.
@@ -50,6 +51,7 @@ def collectprovinces():
     print("\nThe provinces you entered are:\n")
     for index in range(len(provlist)):
             print(provlist[index])
+    a = test_province_count()
     input("\nPress ENTER to continue...")
       
     #TestProvince.testcount(provnum=provnum)
@@ -94,6 +96,7 @@ def copy_spreadsheet():
     #Creates files and copies data over
     xl_write = xlwt.Workbook()
     xl_sheet = xl_write.add_sheet(xl_read.sheet_names()[0])
+    input("\nPress ENTER to continue...")
     
     
     

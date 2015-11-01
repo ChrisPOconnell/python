@@ -7,6 +7,8 @@ Feature 17, Assignment 3, completed 10/19/2015
 Feature 17, Assignment 3, use of a class method to update a class variable.
 '''
 import unittest
+#from other_functions import *
+
 class Province:
         master_province_count = 0
         total_provinces = master_province_count
@@ -22,7 +24,3 @@ class Province:
         def increment_master_province_count(cls):
                 Province.total_provinces+= 1
 
-class TestProvince(unittest.TestCase):
-        def testcount(self,provnum):
-            self.count=provnum
-            self.assertEqual(self.selfcount,Province.total_provinces,"GOOD")

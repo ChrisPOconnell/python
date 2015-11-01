@@ -1,0 +1,63 @@
+__author__ = 'ChrisPOConnell'
+'''
+Assignment 4
+from test.test_importlib.import_.test_packages import ParentModuleTests
+from test.test_importlib.import_.test_packages import ParentModuleTests
+gui.py
+'''
+
+from tkinter import *
+
+class GuiMainMenu(Frame):
+    def __init__(self,Parent):
+        Frame.__init__(self,Parent)
+        self.parent = Parent
+        self.GuiInit()
+    
+    def GuiInit(self):
+        # Adds title to top of window.
+        self.parent.title("Catalog Staging Program")
+       
+        # Creates main menu bar object.
+        menu_bar=Menu(self.parent)
+        
+        # Creates submenus
+        file_options = Menu(self.parent)
+        help_options = Menu(self.parent)
+        
+        # Adds menu_bar to parent object.  
+        self.parent.config(menu=menu_bar)
+        
+        # Populate menu_bar with submenus.
+        menu_bar.add_cascade(label="File",menu=file_options)
+        menu_bar.add_cascade(label="Help",menu=help_options)
+        
+        # Create onExit function and add to File menu
+        def onExit(): self.quit()
+        file_options.add_command(label="Exit",command=onExit)
+        
+        # Populates Help -> About
+        help_options.add_command(label="About",command=display_help_about)
+
+def main_function():
+    root = Tk()
+    root.geometry("450x250+600+400")  # sets size for window + positions it on screen
+    # width, height of window, x screen coordinate, y coordinate
+    app = GuiMainMenu(root)
+    root.mainloop()
+
+def display_help_about():
+    master = Tk()
+    master.parent.title=("Help -> About")
+    help_about = Label(master, text="Help -> About")
+    help_about.pack()
+    mainloop()
+    
+    
+
+if __name__ == '__main__':
+    # http://stackoverflow.com/questions/419163/what-does-if-name-main-do
+    main_function()
+
+
+

@@ -1,0 +1,50 @@
+__author__ = 'ChrisPOConnell'
+'''
+Assignment 4
+from test.test_importlib.import_.test_packages import ParentModuleTests
+from test.test_importlib.import_.test_packages import ParentModuleTests
+gui.py
+'''
+
+from tkinter import *
+
+class GuiMainMenu(Frame):
+    def __init__(self,Parent):
+        Frame.__init__(self,Parent)
+        self.parent = Parent
+        self.GuiInit()
+    
+    def GuiInit(self):
+        self.parent.title("Catalog Staging Program")
+        menu_file = Menu(self.parent)
+        menu_help = Menu(self.parent)
+        #menu_bar2 = Menu(self.parent)
+        self.parent.config(menu=menu_file)
+        #self.parent.config(menu=menu_help)
+        #I don't understand what these next two lines are for...
+        demo_file = Menu(menu_file)  # menu that will be added to drop-down
+        #demo_help = Menu(menu_help)
+        menu_file.add_cascade(label="File", menu=demo_file)
+        menu_file.add_cascade(label="Help", menu=demo_file)
+        
+        
+        #menu_bar.add_cascade(label="Help", menu=demo_menu2)
+        
+        #Populate menu choices:
+        def onExit(): self.quit()
+        demo_file.add_command(label="Exit", command=onExit)
+
+def main_function():
+    root = Tk()
+    root.geometry("450x250+600+400")  # sets size for window + positions it on screen
+    # width, height of window, x screen coordinate, y coordinate
+    app = GuiMainMenu(root)
+    root.mainloop()
+
+
+if __name__ == '__main__':
+    # http://stackoverflow.com/questions/419163/what-does-if-name-main-do
+    main_function()
+
+
+

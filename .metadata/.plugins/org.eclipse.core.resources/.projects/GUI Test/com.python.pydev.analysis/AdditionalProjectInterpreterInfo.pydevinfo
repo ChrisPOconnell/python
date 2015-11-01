@@ -1,0 +1,27 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Chris Local\OneDrive\Github\python\.metadata\.plugins\org.eclipse.core.resources\.projects\GUI Test\com.python.pydev.analysis\v2_indexcache
+__init__|1446071845750333000|C:\Users\Chris Local\OneDrive\Github\python\GUI Test\__init__.py
+combobox|1446076092524065000|C:\Users\Chris Local\OneDrive\Github\python\GUI Test\combobox.py
+radio|1446076993358666000|C:\Users\Chris Local\OneDrive\Github\python\GUI Test\radio.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+4=FirstGUIDemo
+2=combobox
+3=__init__
+1=radio
+-- END DICTIONARY
+-- START TREE 1
+6
+__a|2|__author__!11@__author__!19@
+dis|2|display_choice!18@display_choice!10@
+fir|1|FirstGUIDemo!25@
+int|2|integer_representing_language!11@integer_representing_language!19@
+lan|2|language_selection!11@language_selection!19@
+roo|2|root!11@root!19@
+-- END TREE
+-- START TREE 2
+1
+__i|1|__init__!4&26@
+-- END TREE

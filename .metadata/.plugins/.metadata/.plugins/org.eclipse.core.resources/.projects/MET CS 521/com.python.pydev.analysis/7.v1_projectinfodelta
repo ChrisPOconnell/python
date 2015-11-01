@@ -1,0 +1,19 @@
+INSTUPAssignment4.mainmodule.classes
+C:\Users\Chris Local\OneDrive\Github\python\MET CS 521\Assignment4\mainmodule\classes.py
+INFOS:&&3|1|2|0&&1|3|2|0&&3|4|2|3&&3|5|2|3&&2|6|2|3&&3|7|2|8&&3|9|2|8&&3|10|2|8&&2|11|2|3&&2|12|2|3&&1|13|2|0&&2|14|2|13&&3|15|2|16
+TestProvince=13
+testcount=14
+comments=10
+Assignment4.mainmodule.classes=2
+__str__=11
+count=15
+total_provinces=5
+office_location=9
+increment_master_province_count=12
+Province=3
+Province.__init__=8
+TestProvince.testcount=16
+name=7
+__author__=1
+__init__=6
+master_province_count=4

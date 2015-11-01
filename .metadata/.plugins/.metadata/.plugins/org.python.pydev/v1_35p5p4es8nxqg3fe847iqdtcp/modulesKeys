@@ -1,0 +1,130 @@
+MODULES_MANAGER_V2
+Image
+OpenGL
+_ast
+_bisect
+_bytesio
+_codecs
+_codecs_cn
+_codecs_hk
+_codecs_iso2022
+_codecs_jp
+_codecs_kr
+_codecs_tw
+_collections
+_csv
+_datetime
+_fileio
+_functools
+_heapq
+_hotshot
+_imp
+_io
+_json
+_locale
+_lsprof
+_md5
+_multibytecodec
+_opcode
+_operator
+_pickle
+_random
+_sha
+_sha1
+_sha256
+_sha512
+_signal
+_sre
+_stat
+_string
+_struct
+_subprocess
+_symtable
+_thread
+_tracemalloc
+_warnings
+_weakref
+_winapi
+_winreg
+array
+atexit
+audioop
+binascii
+builtins
+cPickle
+cStringIO
+cmath
+datetime
+email
+errno
+exceptions
+faulthandler
+future_builtins
+gc
+hashlib
+imageop
+imp
+itertools
+marshal
+math
+mmap
+msvcrt
+nt
+numpy
+operator
+os
+os.path
+parser
+pytest
+python3|C:\Python35\python3.dll
+python35|C:\Python35\python35.dll
+python35_d|C:\Python35\python35_d.dll
+python3_d|C:\Python35\python3_d.dll
+scipy
+signal
+socket
+strop
+sys
+thread
+time
+vcruntime140|C:\Python35\vcruntime140.dll
+winreg
+wx
+wxPython
+xlrd.__init__|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\__init__.py
+xlrd.biffh|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\biffh.py
+xlrd.book|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\book.py
+xlrd.compdoc|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\compdoc.py
+xlrd.formatting|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\formatting.py
+xlrd.formula|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\formula.py
+xlrd.info|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\info.py
+xlrd.licences|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\licences.py
+xlrd.sheet|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\sheet.py
+xlrd.timemachine|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\timemachine.py
+xlrd.xldate|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\xldate.py
+xlrd.xlsx|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlrd\xlsx.py
+xlwt.Autofit|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Autofit.py
+xlwt.BIFFRecords|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\BIFFRecords.py
+xlwt.Bitmap|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Bitmap.py
+xlwt.Cell|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Cell.py
+xlwt.Column|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Column.py
+xlwt.CompoundDoc|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\CompoundDoc.py
+xlwt.CreateLearningSheet|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\CreateLearningSheet.py
+xlwt.ExcelFormula|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\ExcelFormula.py
+xlwt.ExcelFormulaLexer|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\ExcelFormulaLexer.py
+xlwt.ExcelFormulaParser|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\ExcelFormulaParser.py
+xlwt.ExcelMagic|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\ExcelMagic.py
+xlwt.Formatting|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Formatting.py
+xlwt.GenerateAFFont|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\GenerateAFFont.py
+xlwt.Row|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Row.py
+xlwt.Style|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Style.py
+xlwt.UnicodeUtils|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\UnicodeUtils.py
+xlwt.Utils|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Utils.py
+xlwt.Workbook|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Workbook.py
+xlwt.Worksheet|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\Worksheet.py
+xlwt.__init__|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\__init__.py
+xlwt.antlr|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\antlr.py
+xlwt.compat|C:\Users\Chris Local\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\xlwt\compat.py
+xxsubtype
+zipimport
+zlib

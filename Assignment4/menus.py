@@ -1,17 +1,19 @@
 __author__ = 'ChrisPOConnell'
 '''
 Assignment 4
+from classes import TestValidity
 menus.py
 '''
 import time
-#import unittest
+from classes import *
+
 def mainmenu():
     #Intent:  To serve as a main menu for the user to select options from.
     #Definitions:
-    selection = '*' #priming
+    selection = '*'  #priming
     valid = 'NO'     #Used to determine if selection is valid
     valid_selection=['1', '2', '3', '?', 'Q'] #populates a valid inputs list
-    print("\nWelcome to the Catalog Staging Program (Version 3)\n")
+    print("\nWelcome to the Catalog Staging Program (Version 4)\n")
     while (valid != 'OK'):
         print("1   Enter provinces (from scratch)")
         print("2   View provinces (from file)")
