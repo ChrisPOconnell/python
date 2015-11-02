@@ -3,12 +3,20 @@ __author__ = 'ChrisPOConnell'
 Assignment 4
 collect_and_store.py
 Intent:  This file contains code to collect data and read/write files.
+from test.test_univnewlines import DATA_CR
 '''
 import time
 import xlrd
 import xlwt
 from classes import Province
-from test import *
+#import test
+from test import test_province_count
+#Used for set_data_file_location()
+from os import listdir
+from os.path import isfile, join
+
+
+
 #from classes import TestProvince
 
 def collectprovinces():
@@ -84,7 +92,7 @@ def readlog():
 def copy_spreadsheet():
     #Opens file and reads some data out:
     path="C:/Users/Chris Local/OneDrive/Github/python/Assignment4/"
-    xl_read = xlrd.open_workbook(path+"sample_data/Book1.xls")
+    xl_read = xlrd.open_workbook(path+"data_files/Book1.xls")
     print(xl_read.sheet_names()[0])
     xlr_sheet = xl_read.sheet_by_index(0)
     xlr_nrows = xlr_sheet.nrows
@@ -98,6 +106,40 @@ def copy_spreadsheet():
     xl_sheet = xl_write.add_sheet(xl_read.sheet_names()[0])
     input("\nPress ENTER to continue...")
     
-    
-    
-
+# Feature 22 Assignment 4
+def set_data_file_location():
+    valid = 'NO'
+    data_file_location = ""
+    # Adapted directory pull from:
+    # http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python
+            
+    while(valid == 'NO'):
+        print("Enter the folder name that your data set is in. (Note, dataset must be found in data_files/ folder) (Q to quit):")
+        data_file_location = input("")
+        if(data_file_location != 'Q'):
+            data_file_location = "data_files/" + data_file_location
+            # Feature 22.1 Assignment 4
+            try:    
+                file_list = [  f for f in listdir(data_file_location) if isfile(join(data_file_location,f)) ]
+                valid = 'YES'
+            except (FileNotFoundError):
+                print("\nThis directory doesn't seem to exist...\n")
+                valid = 'NO'
+                
+        if(data_file_location != 'Q' and valid != 'NO'):              
+            file_list = [  f for f in listdir(data_file_location) if isfile(join(data_file_location,f)) ]
+            valid = 'YES'
+            print("\nOK, the location is: " + data_file_location)
+            print("This folder contains: " + str(len(file_list)) + " files.\n")
+            print("Do you want to save path to the log file? (Y/N)\n")
+            save_to_file = input("")
+            if(save_to_file == 'Y'):
+                fileW = open('LogFile.txt', 'a')
+                fileW.write("\ndata_file_location:\n" + data_file_location)
+                fileW.close()
+                    
+        if(data_file_location != 'Q'):
+            if(valid != 'NO'):
+                input("\nPress ENTER to continue...\n")
+        else:
+            valid = 'YES'

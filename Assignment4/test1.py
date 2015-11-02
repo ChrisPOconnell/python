@@ -1,3 +1,15 @@
+__author__ = 'ChrisPOConnell'
+'''
+Assignment 4
+test1.py
+This file is not used as part of the running code, it's just for testing.
+
+Intent:  This is an exact cut and paste from StackOverflow used to generate
+         one pass and one fail for a unittest.  I used to his to see if a green 
+         pass bar would be generated in either PyCharm or PyDev.  In  neither
+         environment does a green bar appear.
+'''
+
 from unittest.case import TestCase
 import unittest
 from io import StringIO

@@ -12,12 +12,13 @@ def mainmenu():
     #Definitions:
     selection = '*'  #priming
     valid = 'NO'     #Used to determine if selection is valid
-    valid_selection=['1', '2', '3', '?', 'Q'] #populates a valid inputs list
+    valid_selection=['1', '2', '3', '4', '?', 'Q'] #populates a valid inputs list
     print("\nWelcome to the Catalog Staging Program (Version 4)\n")
     while (valid != 'OK'):
         print("1   Enter provinces (from scratch)")
-        print("2   View provinces (from file)")
+        print("2   Set data location for verification")
         print("3   Copy spreadsheet")
+        print("4   replace_data_file_location()")
         print("?   View log of progress so far.")
         print("Q   to quit\n")
         selection = input("Enter your value and then press enter: ")
