@@ -1,0 +1,25 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Chris Local\OneDrive\Github\python\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab8\com.python.pydev.analysis\v2_indexcache
+remaining_code|1447102730257501000|C:\Users\Chris Local\OneDrive\Github\python\Lab8\remaining_code.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=remaining_code
+-- END DICTIONARY
+-- START TREE 1
+10
+de_|0|
+deq|1|dequeue_results!11@
+des|0|
+fra|1|fragments_remaining!11@
+fro|0|
+mov|0|
+new|1|new_text!11@
+off|0|
+res|1|resulting_text!11@
+run|0|
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,34 @@
+
+def de_queue(a_text, a_list):
+    # Returns (0) a_list[FRONT_INDEX] + a_text AND
+    # (1) a_list with a_list[FRONT_INDEX] removed
+          
+def move_from_front_to_back(a_list):
+    
+front_value = a_list.pop(FRONT_INDEX)
+return new_text, new_list
+return a_list
+new_text = a_text + str(front_element)
+
+# for "Returns (0) … (the first return)"
+# for "Returns (1) …(the second return)"
+front_element = a_list[FRONT_INDEX]
+
+
+new_list = a_list  # (rather than try to manipulate parameters)
+
+
+new_list.remove(front_element)
+if fragment_selected_q != 'n':  # not "no"
+a_list.append(front_value)
+dequeue_results = de_queue(resulting_text, fragments_remaining)
+# Fulfillment of Postconditions 1-2:
+fragments_remaining = dequeue_results[1]
+else:
+resulting_text = str(dequeue_results[0])
+# Fulfillment of Part(2) of Postcondition 1:
+global resulting_text, fragments_remaining
+# Fulfillment of Postcondition 1:
+# Fulfillment of Part(1) of Postcondition 1:
+fragment_selected_q = offer_front_fragment()
+move_from_front_to_back(fragments_remaining)

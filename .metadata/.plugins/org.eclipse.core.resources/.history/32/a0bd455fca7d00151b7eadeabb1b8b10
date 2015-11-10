@@ -1,9 +1,0 @@
-#from unittest import result
-def return_valid(result):
-    if result == "OK":
-        return "OK"
-    else:
-        return "NO"
-    
-def cls():
-    
