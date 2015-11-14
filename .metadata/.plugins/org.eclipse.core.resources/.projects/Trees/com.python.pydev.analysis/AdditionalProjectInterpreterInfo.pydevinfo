@@ -1,0 +1,26 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Chris Local\OneDrive\Github\python\.metadata\.plugins\org.eclipse.core.resources\.projects\Trees\com.python.pydev.analysis\v2_indexcache
+__init__|1447288351080584000|C:\Users\Chris Local\OneDrive\Github\python\Trees\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+3=TreeNode.__init__
+2=TreeNode
+1=__init__
+-- END DICTIONARY
+-- START TREE 1
+3
+nod|5|node_4!11@node_2!11@node_1!11@node_5!11@node_3!11@
+sam|1|sample_tree!11@
+tre|1|TreeNode!9@
+-- END TREE
+-- START TREE 2
+6
+__i|1|__init__!2&10@
+add|1|add_child!2&10@
+chi|1|children!3&11@
+nam|1|name!3&11@
+par|1|parent!3&11@
+pri|1|print_pre_order!2&10@
+-- END TREE

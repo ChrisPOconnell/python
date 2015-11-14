@@ -7,6 +7,7 @@ __init__.py
 from menus import mainmenu
 from collect_and_store import *
 from under_development import *
+from spreadsheet_qc import *
 
 def start():
     result = '*'
@@ -17,7 +18,8 @@ def start():
         elif result == '2':
             set_data_file_location()
         elif result == '3':
-            copy_spreadsheet()
+            spreadsheets_to_qc()
+            input("\nPress ENTER to continue...")
         elif result == '4': 
             get_data_file_location()
         elif result == '?':

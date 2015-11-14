@@ -1,3 +1,9 @@
+__author__ = 'ChrisPOConnell'
+'''
+Assignment 7 (or 8 depending on where you're looking)
+__init__.py
+'''
+
 # A test that presents fragments of The Gettysburg Address for acceptance
 # (Practice with the queue data structure)
 
@@ -86,10 +92,10 @@ def move_from_front_to_back(a_list):
 def de_queue(a_text, a_list):
     # Returns (0) a_list[FRONT_INDEX] + a_text AND
     # (1) a_list with a_list[FRONT_INDEX] removed
-    # for "Returns (0) … (the first return)"
+    # for "Returns (0) (the first return)"
     front_element = a_list[FRONT_INDEX]
     new_text = a_text + str(front_element)
-    # for "Returns (1) …(the second return)"
+    # for "Returns (1) (the second return)"
     new_list = a_list  # (rather than try to manipulate parameters)
     new_list.remove(front_element)
     return new_text, new_list

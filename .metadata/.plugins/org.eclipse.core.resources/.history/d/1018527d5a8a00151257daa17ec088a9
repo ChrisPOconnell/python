@@ -1,0 +1,25 @@
+import xlrd
+
+def compare_spreadsheet(path, file, template):
+    file_to_test = path + file
+    template_to_use = template
+    #  TESTs IF FILE EXISTS
+    
+    xl_file = xlrd.open_workbook(file_to_test)
+    xl_file_sheet = xl_file.sheet_by_index(0)
+    xl_file_columns = xl_file_sheet.ncols
+    
+    xl_template = xlrd.open_workbook(template_to_use)
+    xl_template_sheet = xl_template.sheet_by_index(0)
+    xl_template_columns = xl_template_sheet.ncols
+    
+    if (xl_file_columns == xl_template_columns):
+        print("Column numbers for " + file+ "matches template! - OK!")
+    else:
+        print("Column numbers for " + file + " does not match " + "template! File = " + str(xl_file_columns) + ", TEMPLATE = " + str(xl_template_columns))
+ 
+compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","AbsentAwaitingSeeking.xls", "data_files/templates/TEMPLATE_AbsentAwaitingSeeking.xls")
+compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","AdvisoryCommittees.xls", "data_files/templates/TEMPLATE_AdvisoryCommittees.xls")
+compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","AlphabeticIndex.xls", "data_files/templates/TEMPLATE_AlphabeticIndex.xls")
+compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","CardinalBishopPrefectApostolic.xls", "data_files/templates/TEMPLATE_CardinalBishopPrefectApostolic.xls")
+compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","DeceasedJesuits.xls", "data_files/templates/TEMPLATE_DeceasedJesuits.xls")       

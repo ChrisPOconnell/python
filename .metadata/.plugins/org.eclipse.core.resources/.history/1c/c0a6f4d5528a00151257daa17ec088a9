@@ -1,0 +1,8 @@
+import sqlite3
+import os.path
+
+def create_db():
+    exists = os.path.isfile("data_files/results.db")
+    print(exists)
+    
+    

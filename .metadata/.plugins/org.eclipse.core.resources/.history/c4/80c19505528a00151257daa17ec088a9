@@ -1,0 +1,17 @@
+import sqlite3
+
+def create_db():
+    conn = sqlite3.connect("results.db")
+    cursor = conn.cursor()
+    #return conn, cursor
+    a_cursor = 0 
+    a_num_fields = 3
+    a_table_name = 'FILE_RESULTS'
+    creation_str = 'CREATE TABLE ' + a_table_name + ' ('
+    for i in range(0, a_num_fields - 1):
+        creation_str += 's' + str(i)+ ' int,'
+    creation_str +=  's' + str(a_num_fields - 1)+ ' int)'
+    print(creation_str)
+    a_cursor.execute(creation_str)
+    conn.commit() # save changes
+    print('table ' + a_table_name + ' created')

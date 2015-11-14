@@ -16,7 +16,7 @@ def mainmenu():
     while (valid != 'OK'):
         print("1   Enter provinces (from scratch)")
         print("2   Set data location for verification")
-        print("3   Copy spreadsheet")
+        print("3   QC spreadsheets!")
         print("4   replace_data_file_location()")
         print("?   View log of progress so far.")
         print("Q   to quit\n")
