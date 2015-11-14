@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Assignment5/spreadsheet_qc2.py&apos; to &apos;build_and_verify.py&apos;" description="Rename resource &apos;spreadsheet_qc2.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="spreadsheet_qc2.py" name="build_and_verify.py" stamp="1447518759029" updateReferences="true"/>
+</session>

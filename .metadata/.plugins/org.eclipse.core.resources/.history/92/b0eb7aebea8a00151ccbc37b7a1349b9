@@ -1,0 +1,135 @@
+import xlrd
+import os.path
+from os import listdir
+
+proof_path = "C:/Users/Chris Local/OneDrive/Github/python/Assignment5/data_files/sample-reports-NOSENSITIVEINFO"
+
+def define_files():    
+    # First range is columns, should always be 2
+    # Second range is number of total reports, which should be PROVNUM * 2 + 16
+    files_totest = [[[] for i in range(2)] for i in range(32)]
+    
+    files_totest[0][0] = "AbsentAwaitingSeeking.xls"
+    files_totest[0][1] = "data_files/templates/TEMPLATE_AbsentAwaitingSeeking.xls"
+    
+    files_totest[1][0] = "AdvisoryCommittees.xls"
+    files_totest[1][1] = "data_files/templates/TEMPLATE_AdvisoryCommittees.xls"
+    
+    files_totest[2][0] = "AlphabeticIndex.xls"
+    files_totest[2][1] = "data_files/templates/TEMPLATE_AlphabeticIndex.xls"
+    
+    files_totest[3][0] = "CardinalBishopPrefectApostolic.xls"
+    files_totest[3][1] = "data_files/templates/TEMPLATE_CardinalBishopPrefectApostolic.xls"
+    
+    files_totest[4][0] = "DeceasedJesuits.xls"
+    files_totest[4][1] = "data_files/templates/TEMPLATE_DeceasedJesuits.xls"
+    
+    files_totest[5][0] = "DepartedSociety.xls"
+    files_totest[5][1] = "data_files/templates/TEMPLATE_DepartedSociety.xls"  
+    
+    files_totest[6][0] = "FormationStatus.xls"
+    files_totest[6][1] = "data_files/templates/TEMPLATE_FormationStatus.xls"
+    
+    files_totest[7][0] = "IndexofHouses_CDT.xls"
+    files_totest[7][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[8][0] = "IndexofHouses_CFN.xls"
+    files_totest[8][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[9][0] = "IndexofHouses_MAR.xls"
+    files_totest[9][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[10][0] = "IndexofHouses_ORE.xls"
+    files_totest[10][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[11][0] = "IndexofHouses_UCS.xls"
+    files_totest[11][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[12][0] = "IndexofHouses_UNE.xls"
+    files_totest[12][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[13][0] = "IndexofHouses_USA.xls"
+    files_totest[13][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[14][0] = "IndexofHouses_WIS.xls"
+    files_totest[14][1] = "data_files/templates/TEMPLATE_IndexofHouses.xls"
+    
+    files_totest[15][0] = "Jubilarians.xls"
+    files_totest[15][1] = "data_files/templates/TEMPLATE_Jubilarians.xls"
+    
+    files_totest[16][0] = "MiniCatalog - GPSStreet 2016_CDT.xls"
+    files_totest[16][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[17][0] = "MiniCatalog - GPSStreet 2016_CFN.xls"
+    files_totest[17][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[18][0] = "MiniCatalog - GPSStreet 2016_MAR.xls"
+    files_totest[18][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[19][0] = "MiniCatalog - GPSStreet 2016_ORE.xls"
+    files_totest[19][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+
+    files_totest[20][0] = "MiniCatalog - GPSStreet 2016_UCS.xls"
+    files_totest[20][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[21][0] = "MiniCatalog - GPSStreet 2016_UNE.xls"
+    files_totest[21][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[22][0] = "MiniCatalog - GPSStreet 2016_USA.xls"
+    files_totest[22][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[23][0] = "MiniCatalog - GPSStreet 2016_WIS.xls"
+    files_totest[23][1] = "data_files/templates/TEMPLATE_MiniCatalog - GPSStreet 2016.xls"
+    
+    files_totest[24][0] = "ProvCommApostolates.xls"
+    files_totest[24][1] = "data_files/templates/TEMPLATE_ProvCommApostolates.xls"
+    
+    files_totest[25][0] = "ProvincialCommittees.xls"
+    files_totest[25][1] = "data_files/templates/TEMPLATE_ProvincialCommittees.xls"
+    
+    files_totest[26][0] = "ProvinceAddresses.xls"
+    files_totest[26][1] = "data_files/templates/TEMPLATE_ProvinceAddresses.xls"
+    
+    files_totest[27][0] = "ResidentsFromOtherProv.xls"
+    files_totest[27][1] = "data_files/templates/TEMPLATE_ResidentsFromOtherProv.xls"
+    
+    files_totest[28][0] = "ResidingInOtherProvinces.xls"
+    files_totest[28][1] = "data_files/templates/TEMPLATE_ResidingInOtherProvinces.xls"
+    
+    files_totest[29][0] = "SuperiorsByAppointment.xls"
+    files_totest[29][1] = "data_files/templates/TEMPLATE_SuperiorsByAppointment.xls"
+
+    files_totest[30][0] = "TranscribedInToProv.xls"
+    files_totest[30][1] = "data_files/templates/TEMPLATE_TranscribedInToProv.xls"
+    
+    files_totest[31][0] = "TranscribedToOther.xls"
+    files_totest[31][1] = "data_files/templates/TEMPLATE_TranscribedToOther.xls" 
+    
+    return(files_totest)
+
+def compare_files():
+    # Feature 26 Assignment 5, two sets and compare.
+    files_existing = set(listdir(proof_path))
+    files_totest = define_files()
+    files_totest_list = list()
+    for r, c in files_totest:
+        files_totest_list.append(r)
+    try:
+        files_totest_set = set(files_totest_list)
+        comparison = set(files_existing) == set(files_totest_set)
+        if(comparison == True):
+            print("OK    - The file names tested matches the file names in the directory.")
+        else:
+            print("ERROR - The file names tested don't match the file names in the directory")
+    except (TypeError):
+        print("ERROR - There's some error with the sets...")
+        
+    if(len(files_existing) == len(files_totest_list)):
+        print("OK    - The number of files tested matches the number of existing files")
+        print("         Existing: " + len(files_existing) + " Tested: " + len(files_totest_list))
+
+    else:
+        print("ERROR - The number of files tested doesn't match the number of existing files")
+        print("         Existing: " + len(files_existing) + " Tested: " + len(files_totest_list))
+        
+compare_files()

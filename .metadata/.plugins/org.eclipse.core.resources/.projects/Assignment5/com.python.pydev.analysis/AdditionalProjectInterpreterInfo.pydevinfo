@@ -2,14 +2,14 @@
 -- START DISKCACHE_2
 C:\Users\Chris Local\OneDrive\Github\python\.metadata\.plugins\org.eclipse.core.resources\.projects\Assignment5\com.python.pydev.analysis\v2_indexcache
 under_development|1446507725427568000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\under_development.py
-spreadsheet_qc|1447511777683006000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\spreadsheet_qc.py
 test2|1446483191417092000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test2.py
+spreadsheet_qc|1447511777683006000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\spreadsheet_qc.py
+build_and_verify|1447519188904414000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\build_and_verify.py
 test|1446319669540894000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test.py
 start|1446507554598830000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\start.py
 collect_and_store|1446729224097214000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\collect_and_store.py
-menus|1447458026440488000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\menus.py
-spreadsheet_qc2|1447511861138775000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\spreadsheet_qc2.py
-__init__|1447458169496494000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\__init__.py
+menus|1447518904470125000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\menus.py
+__init__|1447518904454500000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\__init__.py
 test1|1446476704582204000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test1.py
 db|1447511777866861000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\db.py
 -- END DISKCACHE
@@ -20,42 +20,43 @@ db|1447511777866861000|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\d
 6=start
 15=MyTestCase
 3=test1
-8=under_development
+7=under_development
 13=Application.createWidgets
 14=test_province_count
 2=test2
+9=build_and_verify
 5=collect_and_store
-7=menus
-9=spreadsheet_qc2
+8=menus
 1=__init__
 12=Application
 11=db
 -- END DICTIONARY
 -- START TREE 1
-23
+24
 __a|8|__author__!11@__author__!19@__author__!27@__author__!35@__author__!43@__author__!51@__author__!59@__author__!67@
 app|2|Application!17@app!19@
-che|1|check_file_exists!74@
+che|0|
 col|1|collectprovinces!42@
-com|3|compare_files!74@compare_spreadsheet!74@compare_spreadsheet!82@
+com|2|compare_files!74@compare_spreadsheet!82@
 cop|1|copy_spreadsheet!42@
 cre|1|create_db!90@
-fil|4|file_count!82@files_tested!75@file_count!74@files_tested!83@
-get|1|get_data_file_location!66@
-mai|1|mainmenu!58@
+def|1|define_files!74@
+fil|2|file_count!82@files_tested!83@
+get|1|get_data_file_location!58@
+mai|1|mainmenu!66@
 myt|1|MyTestCase!25@
 pro|1|proof_path!75@
 rea|1|readlog!42@
-rep|1|replace_data_file_location!66@
+rep|1|replace_data_file_location!58@
 res|1|result!27@
 roo|1|root!19@
 run|1|runner!27@
 set|1|set_data_file_location!42@
-spr|2|spreadsheets_to_qc!82@spreadsheets_to_qc!74@
+spr|1|spreadsheets_to_qc!82@
 sta|2|start!50@start!10@
 str|1|stream!27@
 tes|1|test_province_count!33@
-val|1|validate_data_file_location!66@
+val|1|validate_data_file_location!58@
 -- END TREE
 -- START TREE 2
 7
