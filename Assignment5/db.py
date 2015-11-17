@@ -1,5 +1,6 @@
 import sqlite3
 import os.path
+import time
 
 # Feature 25 Assignment 5
 def create_db():
@@ -7,6 +8,7 @@ def create_db():
     # Postcondition 1: If database doesn't exist create it.
     # Postcondition 2: If database exists notify user.
     exists = os.path.isfile("data_files/results.db")
+    #exists = False
     if(exists == False):    
         conn = sqlite3.connect("data_files/results.db")
         cursor = conn.cursor()
@@ -19,6 +21,27 @@ def create_db():
         conn.commit() # save changes
         print('table ' + a_table_name + ' created')
     else:
-        print("Database is existing already")
+        # print("Database is existing already")
+        conn = sqlite3.connect("data_files/results.db")
+    return(conn)
 
-create_db()
+def write_filetest(file_name, column_num_match, headers_match):
+    # Feature 25.1 Assignment 5
+    conn = create_db()
+    cursor = conn.cursor()
+    now = time.strftime("%c")
+    insert_string = "INSERT INTO FILE_RESULTS VALUES ('" + file_name + "','" + column_num_match + "','" + headers_match + "','" + now + "');"
+#    print("        " + insert_string)
+    cursor.execute(insert_string)
+    conn.commit()
+    conn.close()
+    
+def read_filetest():
+    # Feature 25.2 Assignment 5
+    conn = create_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM FILE_RESULTS")
+    print(cursor.fetchall()) # fetch next row
+    for row in cursor.execute("SELECT * FROM FILE_RESULTS;"):
+        print(row)
+    

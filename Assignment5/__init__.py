@@ -9,6 +9,7 @@ from collect_and_store import *
 from under_development import *
 from spreadsheet_qc import *
 from build_and_verify import compare_files
+from db import *
 
 def start():
     result = '*'
@@ -25,6 +26,9 @@ def start():
             get_data_file_location()
         elif result == '5':
             compare_files()
+            input("\nPress ENTER to continue...")
+        elif result == '6':
+            read_filetest()
             input("\nPress ENTER to continue...")
         elif result == '?':
             readlog()

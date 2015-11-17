@@ -1,12 +1,11 @@
 MODULES_MANAGER_V2
 __init__|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\__init__.py
+build_and_verify|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\build_and_verify.py
+build_and_verify2|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\build_and_verify2.py
 collect_and_store|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\collect_and_store.py
 db|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\db.py
 menus|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\menus.py
 spreadsheet_qc|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\spreadsheet_qc.py
-spreadsheet_qc2|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\spreadsheet_qc2.py
 start|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\start.py
 test|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test.py
-test1|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test1.py
-test2|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\test2.py
 under_development|C:\Users\Chris Local\OneDrive\Github\python\Assignment5\under_development.py

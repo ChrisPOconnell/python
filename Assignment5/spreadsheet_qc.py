@@ -1,5 +1,6 @@
 import xlrd
 import os.path
+from db import write_filetest
 
 files_tested = 0 #Must be present to count number of files tested.
     
@@ -23,8 +24,13 @@ def compare_spreadsheet(path, file, template):
     
         if (xl_file_columns == xl_template_columns):
             print("OK    - " + file + "Column numbers for match.")
+            column_match = "OK"
         else:
             print("ERROR - " + file + ": Column numbers do not match.  File = " + str(xl_file_columns) + ", TEMPLATE = " + str(xl_template_columns))
+            column_match = "ERROR"
+            
+        # Feature 25.1 Assignment 5
+        write_filetest(file, column_match, "NOT BUILT YET")
     else:
         print("ERROR - " + file + ": Problem with the parameters passed for testing")
 

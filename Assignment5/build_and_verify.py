@@ -9,6 +9,10 @@ crashes.  I've spent a lot of time researching this, but haven't found a good
 solution.  I attempted to build a small list and append to it, no luck.
 
 Attempts can be found in buid_and_verify2.py.
+
+I think in my next iteration I will solve this problem by putting the file
+names and paths into a spreadsheet and reading them out. This will allow for
+a row count, and thus a dynamically sizing list.
 '''
 
 import xlrd
