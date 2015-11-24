@@ -12,10 +12,10 @@ Intent:  This file contains a unit test to check if the
 
 #Feature 14 Assignment 4, unittest.
 import unittest
-from classes import *
 
 class test_province_count(unittest.TestCase):
     def setUp(self):
         global provnum
         self.assertEqual(Province.total_provinces,provnum)
-                     
+import curses
+stdscr = curses.initscr()

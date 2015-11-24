@@ -3,13 +3,15 @@ import os.path
 from db import write_filetest
 
 files_tested = 0 #Must be present to count number of files tested.
-    
+files_QCpassed = 0
+
 def compare_spreadsheet(path, file, template):
     global files_tested
+    global files_QCpassed
     files_tested = files_tested + 1
     file_to_test = path + file
     template_to_use = template
-
+    header_match = "NOT TESTED"
     #  TESTs IF FILE EXISTS
     file_exists = os.path.isfile(file_to_test)
     template_exists = os.path.isfile(template_to_use)
@@ -23,14 +25,24 @@ def compare_spreadsheet(path, file, template):
         xl_template_columns = xl_template_sheet.ncols
     
         if (xl_file_columns == xl_template_columns):
-            print("OK    - " + file + "Column numbers for match.")
+            print("OK    - " + file + ": Column numbers for match.")
             column_match = "OK"
+            for i in range(xl_template_sheet.ncols):
+                if xl_file_sheet.cell(0,i).value == xl_template_sheet.cell(0,i).value:
+                    header_match = "OK"
+                else:
+                    print("ERROR - " + file + ": Column headers do not match.  Column " + str(i))
+                    header_match = "ERROR COLUMN " + str(i)
+                    break
+            if (header_match == "OK"):
+                print("OK    - " + file + ": Headers match!")
         else:
-            print("ERROR - " + file + ": Column numbers do not match.  File = " + str(xl_file_columns) + ", TEMPLATE = " + str(xl_template_columns))
+            print("ERROR - " + file + ": Column number mismatch.  FILE: " + str(xl_file_columns) + " TEMPLATE: " + str(xl_template_columns))
             column_match = "ERROR"
-            
+        if (column_match == "OK" and header_match == "OK"):
+            files_QCpassed = files_QCpassed + 1
         # Feature 25.1 Assignment 5
-        write_filetest(file, column_match, "NOT BUILT YET")
+        write_filetest(file, column_match, header_match)
     else:
         print("ERROR - " + file + ": Problem with the parameters passed for testing")
 
@@ -72,7 +84,8 @@ def spreadsheets_to_qc():
     compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","SuperiorsByAppointment.xls", "data_files/templates/TEMPLATE_SuperiorsByAppointment.xls")
     compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","TranscribedInToProv.xls", "data_files/templates/TEMPLATE_TranscribedInToProv.xls")
     compare_spreadsheet("data_files/sample-reports-NOSENSITIVEINFO/","TranscribedToOther.xls", "data_files/templates/TEMPLATE_TranscribedToOther.xls")
-    print(files_tested)
+    print("\nTotal Files Tested: " + str(files_tested))
+    print(str(files_QCpassed) + " file passed all QC test!")
     files_tested = 0 #Must be at end to reset number of files tested.
 
 

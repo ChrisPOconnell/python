@@ -1,3 +1,10 @@
+__author__ = 'ChrisPOConnell'
+'''
+Assignment 5
+db.py
+
+'''
+
 import sqlite3
 import os.path
 import time
@@ -10,16 +17,7 @@ def create_db():
     exists = os.path.isfile("data_files/results.db")
     #exists = False
     if(exists == False):    
-        conn = sqlite3.connect("data_files/results.db")
-        cursor = conn.cursor()
-        #return conn, cursor
-        a_num_fields = 3
-        a_table_name = 'FILE_RESULTS'
-        creation_str = 'CREATE TABLE ' + a_table_name + '(file_name, column_num_match, headers_match, date_time)'
-        print(creation_str)
-        cursor.execute(creation_str)
-        conn.commit() # save changes
-        print('table ' + a_table_name + ' created')
+        create_fileresultstable()
     else:
         # print("Database is existing already")
         conn = sqlite3.connect("data_files/results.db")
@@ -44,4 +42,25 @@ def read_filetest():
     print(cursor.fetchall()) # fetch next row
     for row in cursor.execute("SELECT * FROM FILE_RESULTS;"):
         print(row)
-    
+
+def purge_filetest():
+    # Feature 25.2 Assignment 5
+    conn = create_db()
+    cursor = conn.cursor()
+    cursor.execute("DROP TABLE IF EXISTS FILE_RESULTS")
+    conn.commit()
+    create_fileresultstable()
+    print("\nFILE_RESULTS purge completed.")
+
+def create_fileresultstable():
+        # Feature 25.3 Assignment 5/6
+        conn = sqlite3.connect("data_files/results.db")
+        cursor = conn.cursor()
+        #return conn, cursor
+        a_num_fields = 3
+        a_table_name = 'FILE_RESULTS'
+        creation_str = 'CREATE TABLE ' + a_table_name + '(file_name, column_num_match, headers_match, date_time)'
+        print(creation_str)
+        cursor.execute(creation_str)
+        conn.commit() # save changes
+        print('table ' + a_table_name + ' created')

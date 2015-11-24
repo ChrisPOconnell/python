@@ -30,6 +30,9 @@ def start():
         elif result == '6':
             read_filetest()
             input("\nPress ENTER to continue...")
+        elif result == '7':
+            purge_filetest()
+            input("\nPress ENTER to continue...")
         elif result == '?':
             readlog()
         #Feature 15, assignment 3
